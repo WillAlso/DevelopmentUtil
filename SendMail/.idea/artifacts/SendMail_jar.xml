@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="SendMail:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/SendMail_jar</output-path>
+    <root id="archive" name="SendMail.jar">
+      <element id="module-output" name="SendMail" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/google/code/gson/gson/2.8.0/gson-2.8.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/aliyun/aliyun-java-sdk-core/3.0.0/aliyun-java-sdk-core-3.0.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/aliyun/aliyun-java-sdk-dm/3.1.0/aliyun-java-sdk-dm-3.1.0.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
