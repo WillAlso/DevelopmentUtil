@@ -45,7 +45,9 @@ public class JSendSingleMailRequest extends SingleSendMailRequest {
 
     private void parseServerProperties() {
         props = new Properties();
-        try (InputStream in = new BufferedInputStream(new FileInputStream("server.properties"))) {
+        String path = this.getClass().getResource("/server.properties").getPath();
+        File file = new File(path);
+        try (InputStream in = new BufferedInputStream(new FileInputStream(file))) {
             props.load(in);
         } catch (Exception e) {
             System.out.println(e.getMessage());

@@ -10,6 +10,7 @@ import com.aliyuncs.http.MethodType;
 import com.aliyuncs.profile.DefaultProfile;
 
 import java.io.BufferedInputStream;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.util.Properties;
@@ -36,7 +37,9 @@ public class JSendSms extends CommonRequest {
 
     private void parseServerProperties() {
         props = new Properties();
-        try (InputStream in = new BufferedInputStream(new FileInputStream("server.properties"))) {
+        String path = this.getClass().getResource("/server.properties").getPath();
+        File file = new File(path);
+        try (InputStream in = new BufferedInputStream(new FileInputStream(file))) {
             props.load(in);
         } catch (Exception e) {
             System.out.println(e.getMessage());
