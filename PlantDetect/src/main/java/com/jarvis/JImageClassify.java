@@ -1,4 +1,4 @@
-package com.whut;
+package com.jarvis;
 
 import com.baidu.aip.imageclassify.AipImageClassify;
 import org.json.JSONObject;
@@ -69,5 +69,8 @@ public class JImageClassify {
         options.put("baike_num", String.valueOf(baikenum));
         JSONObject jsonObject = client.plantDetect(bytes, options);
         return jsonObject;
+    }
+
+    public static void main(String[] args) {
     }
 }
